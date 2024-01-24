@@ -1,0 +1,14 @@
+{
+    "COMMENTS":"This contains descriptive information about blog posts for the blog main page",
+    "projectposts":{
+        "2022":{
+            "year":"2022",
+            "links":[
+                {"link":"R-project", "title":"R project", "date":"11-28-21", "desc":"Technologies: R, Excel, Python"},
+                {"link":"flutter", "title":"Development of a direct sales application for local products", "date":"12-9-22", "desc":"Technologies: Figma, Flutter"},
+                {"link":"portfolio","title":"Personal Portfolio Website", "date":"1-20-24","desc":"My own personal website."},
+                {"link":"BigData","title":"Big Data Project","date":"5-1-22","desc":"Creating a big data architecture."}
+            ]
+        }
+    }
+}

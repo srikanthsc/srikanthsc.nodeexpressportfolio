@@ -1,0 +1,38 @@
+extends ../main.pug
+
+block scripts
+    script(src="/scripts.js" defer)
+
+block content
+    div(class="container-md")
+        //- Archive list with a menu for each year
+        div(class="mx-auto" style="width:75%;")
+            div(class="text-start fs-2 fw-bolder") Projects
+
+            //- Add a decorative border under the title
+            hr(style="border: 2px solid #3498db; margin-top: 10px; margin-bottom: 20px;")
+
+            //- Dropdown div to hold menu buttons
+            //- Iterate through each archive year
+            each archive in projectposts
+                div.blogEntryContainer(id=`${archive.year}`, style="display: block;")
+                    //- List from oldest to newest in archive
+                    - let postIterator = 0
+                    while postIterator <= archive.links.length-1
+                        //- Change the background color from white to a light gray
+                        div(class="project-entry" style="background-color: #f2f2r4; padding: 15px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin-bottom: 20px;")
+                            a(class="fs-4" href=`/projects/${archive.links[postIterator].link}`) #{archive.links[postIterator].title}
+                            p(class="fs-5") #{archive.links[postIterator].date}<br>#{archive.links[postIterator].desc}
+
+                        //- Add a subtle transition effect on hover
+                        style.
+                            .project-entry:hover {
+                                background-color: #e0e0e0;
+                            }
+
+                        //- Horizontal rule on the bottom on all but the last link
+                        if postIterator != archive.links.length-1
+                            hr(style="margin: 15px 0; border: none; border-top: 1px solid #ddd;")
+
+                        //- Next iteration is the next newest post
+                        - postIterator++

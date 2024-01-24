@@ -1,0 +1,252 @@
+/* References
+    #FFC500 - standard color
+    #FFEE77 - Light variation
+    #d6a400 - dark variation
+    
+    #003F88 - standard color
+    #00509D - Light Variation
+    #00296B - darker variation
+    #002953 - even darker variation
+*/
+html{
+    /* background-color: #003F88; */
+    color:#FFC500;
+    font-family:sans-serif;
+    min-height:100%;
+}
+
+/*Format for the list of links in the navigation bar*/
+nav ul{
+    list-style-type: none;
+    margin: 1%;
+    padding: 0px;
+}
+li a{
+    float:left;
+    display: block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+/*-----------Classes------------*/
+
+/*----------------Main page/general classes----------------*/
+/* Title Text Header*/
+.headerTitle{
+    font-size: 40px;
+    margin-left: 1%;
+    font-weight: bolder;
+    color:#FFC500;
+
+}
+/*Navigation Button*/
+.navButton{
+    color:#FFC500;
+    border: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+}
+/* Change button color text on hover*/
+.navButton:hover{
+    color:#FFEE77;
+}
+/*Descriptive content underneath an h2 title header*/
+.descriptionBox{
+    color:#FFC500;
+    font-weight: bold;
+    width: 50%;
+    text-align: center;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+    padding: 10px;
+}
+/*Footer information mainly used to stick it to the bottom of the page*/
+.stickyFooter{
+    width:100%;
+    text-align: center;
+    padding:5px;
+    margin:auto;
+    margin-top: 50vh;
+}
+/*-----------Text box and frame classes---------------*/
+/*Frame with no apparent structuring*/
+.centerSquareFrame{
+    width:100%;
+    font-size: 120%;
+    padding:5px;
+    margin:auto;
+}
+/*Frame with a thin, light line as a border in a rounded box*/
+.centerLightRoundFrame{
+    border: 3px solid #444444AF;
+    border-radius: 50px;
+    width:50%;
+    font-size: 120%;
+    padding:5px;
+    margin:auto;
+}
+/*Centered textbox, mainly used for blog posts*/
+.centerTextBox{
+    background-color: #00509D2F;
+    border-radius: 25px;
+    width:50%;
+    font-size: 120%;
+    padding:5px;
+    margin:auto;
+    text-align: justify;
+    box-shadow: 0px 5px 10px #000000F5;
+}
+/*Centered image*/
+.centerImage{
+    margin:auto;
+    display:block;
+    width: 100%;
+    height: 100%;
+}
+/*-------------------Blog classes-----------------------*/
+/* The frame that holds a dropdown menu*/
+.dropDownFrame{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+}
+/*Menu button in a dropdown menu*/
+.blogDropDownButton{
+    color:inherit;
+    width: 100%;
+    margin: auto;
+    background-color: #444444;
+    border: 5px none #FFEE773F;
+    border-radius: 100px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 40px;
+} 
+.blogDropDownButton:hover{
+    /* background-color: #002953; */
+    background-color: #666666;
+}
+/*Link box for clicking to a blog post on the main blog page*/
+.blogEntryContainer{
+    border: 5px solid #FFEE773F;
+    border-radius: 20px;
+    text-align: left;
+    text-decoration: none;
+    display: none;
+    z-index: 1;
+    font-size: 24px;
+    box-shadow: 0px 5px 10px #00000055;
+}
+/*The ACTUAL blog entry link*/
+.blogEntryContainer a{
+    color:#FFC500;
+    padding: 5px;
+    border-radius: inherit;
+    text-decoration: none;
+    display:block;
+    font-weight: bold;
+}
+.blogEntryContainer a:hover{
+    background-color: #555555;
+    color:inherit;
+}
+
+/*Descriptive content in a dropdown menu entry*/
+.blogEntryContainer a p{
+    font-weight: normal;
+    font-size: 20px;
+}
+/*Toggled to show the contents of a dropdown menu (blog entries)*/
+.showContents{
+    display:block;
+}
+/*---------------Index Classes--------------------*/
+.indexTable{
+    display: block;
+    background-color: #00509D2F;
+    border-radius: 100px;
+    /* border-top-right-radius: 85px; */
+    /* border-bottom-right-radius: 85px; */
+    width:75%;
+    font-size: 120%;
+    padding:5px;
+    margin: auto;
+    text-align: justify;
+    box-shadow: 0px 5px 10px #000000A0;
+}
+/*left text on index table*/
+.leftText{
+    margin-left:15%;
+}
+/*Used on index page for picture of me*/
+.profileImage{
+    display: inline;
+    width:75%;
+    height: 50%;
+    margin-left:5%;
+    border-radius: 100%;
+}
+/*unused*/
+.introFrame{
+    display: block;
+    height:100%;
+    width:50%;
+    margin:auto;
+}
+/*----------------Text classes-----------------------*/
+/*Centered title header that is meant to be placed right above a centerBox*/
+.centerTitle{
+    font-weight: bold;
+    width:51%;
+    font-size: 40px;
+    padding: 5px;
+    margin:auto;
+}
+/*Bigger, bold font used for titles*/
+.textTitle{
+    color:#d6a400;
+    font-size: 24px;
+    display: block;
+    font-weight: bold;
+}
+/*Bigger, bold font used for special occasions (links)*/
+.textSpecial{
+    color:inherit;
+    word-spacing: normal;
+    font-size: 20px;
+    margin-right: 5px;
+    display: inline;
+    font-weight: 600;
+    text-decoration: none;
+}
+.textSpecial a{
+    text-decoration: none;
+    color:inherit;
+}
+/*Block around an area of text with mono font to resemble code*/
+.codeBlock {
+    background-color: #333333;
+    margin-left: 2px;
+    margin-right: 2px;
+    text-decoration: none;
+    display: inline;
+    font-family: monospace;
+}
+
+
+/*CSS that I made after switching to Bootstrap 5*/
+.textSpecial-bs{
+    color:inherit;
+    font-weight: 600;
+}
+
+.textSpecial-bs a:hover{
+    /* color:inherit; */
+}

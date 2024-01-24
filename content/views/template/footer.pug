@@ -1,0 +1,12 @@
+//- footer. Usage: include under footer indentation
+footer(class="container-fluid")
+    div(class="footer text-center")
+        div(class="row g-0 justify-content-center")
+            div(class="col-md-8")
+                hr
+                each line in footer.content
+                    div(style="color:#d6a400;") #{line}
+                // Add GitHub logo
+                div(class="mt-3")
+                    a(href="https://github.com/srikanthsc", target="_blank")
+                        img(src="/images/other/git.png", alt="GitHub Logo", style="width: 30px; height: 30px;")

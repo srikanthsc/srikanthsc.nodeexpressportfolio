@@ -1,0 +1,26 @@
+//-This loads the content on the blog page that lists the blog post archives
+extends ../main.pug
+block scripts
+    script(src="/scripts.js" defer)
+block content
+    div(class="container-md")
+        div(class="mx-auto" style="width:75%;")
+            div(class="text-start fs-2 fw-bolder") Most Recent Post
+                //- Placeholder for the most recent post
+                div.blogEntryContainer(style="display: block;")
+                    a(class="fs-4" href="/blog/most-recent-post") Most Recent Post Title
+                        p(class="fs-5") Date: January 1, 2023<br>Short description of the most recent post
+
+        br
+
+        div(class="mx-auto" style="width:75%;")
+            //- Placeholder for skills section
+            div(class="text-start fs-2 fw-bolder") Skills
+                ul(class="list-unstyled")
+                    li(class="fs-4") Web Development
+                    li(class="fs-4") JavaScript
+                    li(class="fs-4") React.js
+                    li(class="fs-4") Node.js
+                    li(class="fs-4") HTML/CSS
+                    li(class="fs-4") Problem Solving
+                    //- Add more skills as needed

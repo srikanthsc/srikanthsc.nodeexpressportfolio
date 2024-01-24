@@ -1,0 +1,52 @@
+//- Navigation bar. Usage: put include in the first line of body indentation
+style.
+    .lia {
+        color: inherit;
+        transition: color 0.3s ease-in-out; /* Add transition effect for color change */
+    }
+
+    .lia:hover {
+        color: #FFEE77;
+    }
+
+    nav {
+        background-color: #222; /* Set a background color for the navigation bar */
+        padding: 10px; /* Add some padding for spacing */
+    }
+
+    .navbar-nav {
+        display: flex;
+        gap: 10px; /* Add some gap between the navigation items */
+    }
+
+    .nav-item {
+        list-style-type: none; /* Remove default list styling */
+    }
+
+    .nav-link {
+        text-decoration: none; /* Remove underline from links */
+        padding: 10px; /* Add padding to each tab */
+        border-radius: 5px; /* Add rounded corners */
+        transition: background-color 0.3s ease-in-out; /* Add transition effect for background color change */
+    }
+
+    .nav-link:hover {
+        background-color: #444; /* Change background color on hover */
+    }
+
+nav(class="navbar navbar-expand-lg navbar-light")
+    ul(class="navbar-nav")
+        each nav_link in navLinks
+            if nav_link.href !== "/asdf"
+                if nav_link.name === "Blog"
+                    //- Replace the "Blog" tab with "Skills"
+                    li(class="nav-item active")
+                        a(class="nav-link fs-3 fw-bold" style="color:#FFC500;" href="/skills")
+                            p(class="lia") Skills
+                else
+                    li(class="nav-item active")
+                        a(class="nav-link fs-3 fw-bold" style="color:#FFC500;" href=nav_link.href)
+                            p(class="lia") #{nav_link.name}
+            else
+                //- Do nothing or add an alternative action for the 404 Error link
+hr

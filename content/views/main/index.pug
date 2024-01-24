@@ -1,0 +1,62 @@
+extends ../main.pug
+
+block content
+    // Add hover effect to links
+    style.
+        a:hover {
+            color: #d6a400;
+        }
+
+        // Add animation effect to the profile picture on hover
+        .img-fluid {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .img-fluid:hover {
+            transform: scale(1.1);
+        }
+
+        // Style for rounded corners and decoration
+        .rounded-image {
+            border-radius: 10px; // Adjust the value as needed
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Shadow effect
+            border: 2px solid #007BFF; // Border color and thickness
+        }
+
+    // Container for the content
+    div(class="container-md")
+        // Card with shadow and rounded corners
+        div(class="card mb-3 p-5 shadow rounded" style="background-color: #444444AF")
+            // Row for the card content
+            div(class="row g-0")
+                // Left column for text content
+                div(class="col-md-5")
+                    div(class="card-body")
+                        div(class="card-text text-center fs-3" style="color: #007BFF;") 
+                            em I am Srikanth, I have recently graduated, I am a Tech enthusiast.
+                            em I am always open to collaborating on projects and innovative/disruptive ideas.
+                            em When I am not coding, you will find me lifting weights in the gym or at my desk sketching stuff
+                            // Link to personal portfolio page
+                            a.textSpecial-bs(href="/projects/portfolio")  here
+
+                            // Skill section
+                            div(class="mt-4 text-center") 
+                                h4(class="fs-4 text-light") Skills
+                                // List of skills
+                                ul(class="list-unstyled text-light")
+                                    li(class="fs-5") Java
+                                    li(class="fs-5") C#
+                                    li(class="fs-5") JavaScript
+                                    li(class="fs-5") React.js
+                                    li(class="fs-5") Node.js
+                                    // Add more skills as needed
+
+                                // Add the GIF here with a transparent background, reduced size, rounded corners, shadow, and border
+                                img(src="/images/other/gif1.gif", alt="Your GIF Alt Text", class="mt-4 rounded-image", style="background-color: transparent; width: 900px; height: 500px;")
+
+                // Empty column for spacing
+                div(class="col-md-1")
+
+                // Right column for the profile picture
+                div(class="col-md-5")
+                    img(class="img-fluid rounded-circle" src="/images/other/fs.png")

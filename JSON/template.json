@@ -1,0 +1,30 @@
+{
+    "COMMENT":"This file includes information that will be present on every page",
+    "navLinks":[
+        {"href":"/", "name":"Home"},
+        {"href":"/skills", "name":"Skills"},
+        {"href":"/projects", "name":"Projects"},
+        {"href":"/contact", "name":"Contact"}
+       
+    ],
+    "head":{
+        "link":{
+            "rel":"stylesheet",
+            "type":"text/css",
+            "href":"/index.css"
+        },
+        "meta":{
+            "charset":"utf-8"
+        },
+        "script":{
+            "src":"/scripts.js",
+            "type":"text/javascript"
+        }
+    },
+    "footer":{
+        "content":[
+            "Copyright © 2024 by Srikanthsc.",
+            "Srikanth's Web Portfolio is powered by Node, Express, and Pug (HTML5)"
+        ]
+    }
+}
